@@ -1,0 +1,265 @@
+/* Colores */
+:root {
+    --gris: #16006d;
+    --color_cursor: #ebf0ff;
+    --color_click: #adf8ff;
+    --azul_claro: #618bff ;
+    --azul_t: #d5e6ec ;
+  }
+
+/* Reset de estilos básicos */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9dd6ff;
+    color: var(--gris);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--azul_claro);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+/* Barra de Navegacion */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: var(--color_cursor); 
+    size: 2px;
+}
+
+nav ul li a:active {
+    color: var(--color_click); 
+}
+
+/* Estilo de transición para el efecto de brillo al hacer clic */
+nav ul li a:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgb(255, 255, 255); 
+}
+
+
+/* Columna Izquierda */
+.left-col {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--azul_t);
+    border-radius: 10px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    border: 5px solid var(--azul_claro);
+}
+
+.profile-info {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    color: var(--azul_claro);
+}
+
+.profile-info h3 {
+    font-size: 18px;
+    color: #000d19;
+    margin-top: 10px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: var(--gris);
+    margin-bottom: 10px;
+}
+
+.profile-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.personal-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.personal-info h2 {
+    font-size: 28px;
+    color: var(--azul_claro);
+}
+
+.personal-info h3 {
+    font-size: 16px;
+    color: #000d19;
+    margin-top: 20px;
+}
+
+.personal-info p {
+    font-size: 16px;
+    color: var(--gris);
+    margin-bottom: 10px;
+}
+
+.personal-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Columna Derecha */
+.right-col {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.info h2 {
+    font-size: 24px;
+    color: var(--azul_claro);
+}
+
+.references-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reference {
+    flex-basis: calc(50% - 20px); /* El 50% para dos columnas, menos el espacio entre ellas */
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.reference p {
+    font-size: 16px;
+    color: var(--gris);
+    margin: 0;
+}
+
+/* Estilos para formulario de contacto */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.social-icon {
+    flex-basis: calc(50% - 20px); /* El 50% para dos columnas, menos el espacio entre ellas */
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.social-icon a {
+    text-decoration: none;
+    color: var(--azul_claro); 
+    transition: color 0.3s ease; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icon a:hover {
+    color: var(--color_cursor); 
+}
+
+.social-icon a:active {
+    color: var(--color_click); 
+}
+
+
+
+form label,
+form input,
+form textarea,
+form button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: var(--azul_claro);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos específicos */
+
+footer {
+    text-align: center;
+    background-color: var(--gris);
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-col, .right-col {
+        flex: 1;
+        width: 100%;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+}
